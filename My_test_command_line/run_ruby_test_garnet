@@ -1,0 +1,46 @@
+scons build/POWER_MI_three_level/gem5.debug -j16
+
+./build/POWER_MI_three_level/gem5.debug \
+configs/example/ruby_random_test.py \
+-m 1000 \
+--maxloads 1000 \
+-f 1 \
+--ruby \
+--num-cpus=4 \
+--num-dirs=4 \
+--caches --num-l2caches=4 --l1d_size=32kB --l1i_size=32kB --l1d_assoc=4 --l1i_assoc=4 --l2_size=256kB --l2_assoc=8 \
+--network=garnet --topology=MeshDirCorners_XY --topology-idx=0 --mesh-rows=2 --vcs-per-vnet=4 --routing-algorithm=0 \
+--router-latency=2
+
+
+./build/POWER_MI_three_level/gem5.debug \
+configs/example/ruby_random_test.py \
+-m 1000 \
+--maxloads 1000 \
+-f 1 \
+--ruby \
+--num-cpus=4 \
+--num-dirs=4 \
+--caches --num-l2caches=4 --l1d_size=32kB --l1i_size=32kB --l1d_assoc=4 --l1i_assoc=4 --l2_size=256kB --l2_assoc=8 \
+--network=garnet --topology=MeshDirCorners_XY --mesh-rows=2 --vcs-per-vnet=4 --routing-algorithm=0 \
+--router-latency=2
+
+
+
+####### garnet of the newest version 
+./build/POWER_MI_three_level/gem5.debug \
+--debug-flags=Ruby \
+configs/example/ruby_random_test.py \
+-m 100000000 \
+--maxloads 100000000 \
+-f 1 \
+--ruby \
+--num-cpus=4 \
+--num-dirs=4 \
+--mem-size=2GB \
+--l1d_size=32kB --l1i_size=32kB --l1d_assoc=8 --l1i_assoc=8 --l2_size=512kB --l2_assoc=16 \
+--num-l3caches=4 --l3_size=2MB --l3_assoc=16 \
+--network=garnet --topology=MeshDirCorners_XY --mesh-rows=2 --vcs-per-vnet=4 --routing-algorithm=0 --router-latency=2
+
+
+

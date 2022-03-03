@@ -1,0 +1,36 @@
+./build/POWER_MI_three_level/gem5.debug \
+--debug-flags=Ruby \
+configs/example/ruby_random_test.py \
+-m 100000000 \
+--maxloads 100000000 \
+-f 1 \
+--ruby \
+--num-cpus=1 \
+--num-dirs=1 \
+--caches --num-l2caches=1 --l1d_size=32kB --l1i_size=32kB --l1d_assoc=4 --l1i_assoc=4 --l2_size=256kB --l2_assoc=8
+
+
+
+
+./build/POWER_MI_three_level/gem5.debug \
+--debug-flags=RubySlicc,RubyGenerated,RubyPort,RubyQueue,RubySequencer \
+configs/example/ruby_random_test.py \
+-m 100000000 \
+--maxloads 100000000 \
+-f 1 \
+--ruby \
+--num-cpus=1 \
+--num-dirs=1 \
+--caches --num-l2caches=1 --l1d_size=32kB --l1i_size=32kB --l1d_assoc=4 --l1i_assoc=4 --l2_size=256kB --l2_assoc=8
+
+
+./build/POWER_MI_three_level/gem5.debug \
+configs/example/ruby_random_test.py \
+-m 100000000 \
+--maxloads 100000000 \
+-f 1 \
+--ruby \
+--num-cpus=1 \
+--num-dirs=1 \
+--caches --num-l2caches=1 --l1d_size=32kB --l1i_size=32kB --l1d_assoc=4 --l1i_assoc=4 --l2_size=256kB --l2_assoc=8
+
