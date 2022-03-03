@@ -1,3 +1,14 @@
+--------------------------- He Liu add this ----------------------------------
+This is the gem5 simulator source code.
+
+This code is maintained for the reason that the source code provided in gem5.org 
+is unable to obtained.
+
+All files in master branch should be keeped clean, and further modification should
+be implemented through adding branches.
+
+------------------------ THE ORIGINAL README CONTENTS ------------------------
+
 This is the gem5 simulator.
 
 The main website can be found at http://www.gem5.org
